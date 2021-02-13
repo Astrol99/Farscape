@@ -25,7 +25,10 @@ public class Player : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
+        {
             jump = true;
+            animator.SetBool("IsJumping", true);
+        }
 
         if (Input.GetButtonDown("Crouch"))
             crouch = true;
@@ -36,6 +39,11 @@ public class Player : MonoBehaviour
             speed = sprintSpeed;
         else if (Input.GetButtonUp("Sprint"))
             speed = defaultSpeed;
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
     }
 
     private void FixedUpdate()
