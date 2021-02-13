@@ -23,11 +23,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
             jump = true;
-        else if (Input.GetButtonDown("Crouch"))
+
+        if (Input.GetButtonDown("Crouch"))
             crouch = true;
         else if (Input.GetButtonUp("Crouch"))
             crouch = false;
-        else if (Input.GetButtonDown("Sprint"))
+        
+        if (Input.GetButtonDown("Sprint"))
             speed = sprintSpeed;
         else if (Input.GetButtonUp("Sprint"))
             speed = defaultSpeed;
