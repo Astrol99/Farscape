@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 159740388}
   - component: {fileID: 159740387}
   - component: {fileID: 159740386}
+  - component: {fileID: 159740389}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 256
   m_GroundCheck: {fileID: 2036445913}
   m_CeilingCheck: {fileID: 1001975006}
   m_CrouchDisableCollider: {fileID: 159740387}
@@ -184,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 159740382}
-  defaultSpeed: 50
-  sprintSpeed: 70
+  defaultSpeed: 25
+  sprintSpeed: 50
 --- !u!212 &159740384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -230,10 +231,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &159740385
@@ -281,18 +282,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: 0}
+  m_Offset: {x: -0.14416462, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 3.8999999, y: 3.6, z: 4.4, w: 3.8999999}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
-    newSize: {x: 10, y: 10}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 2}
+  m_Size: {x: 0.7616708, y: 1.7921666}
   m_EdgeRadius: 0
 --- !u!50 &159740388
 Rigidbody2D:
@@ -310,11 +311,30 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fb36fd5997542754aaedd61effc29b17, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &159740389
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159740381}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23170d39ae0386844a8acc7b1f438161, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &512073154
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +346,7 @@ GameObject:
   - component: {fileID: 512073157}
   - component: {fileID: 512073156}
   - component: {fileID: 512073155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tundra Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +602,7 @@ GameObject:
   - component: {fileID: 1097851007}
   - component: {fileID: 1097851006}
   - component: {fileID: 1097851005}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tundra Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097851004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.43, y: 0.86, z: 0}
+  m_LocalPosition: {x: 6.37, y: 0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
