@@ -43,7 +43,6 @@ public class Player : MonoBehaviour
 
     public void OnLanding()
     {
-        Debug.Log("STOP JUMPING PLS");
         animator.SetBool("IsJumping", false);
     }
 
