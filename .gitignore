@@ -1,3 +1,7 @@
+# Ignore textmeshpro stuff
+Assets/TextMesh Pro
+TextMesh Pro.meta
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
