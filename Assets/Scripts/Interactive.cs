@@ -1,9 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Interactive : MonoBehaviour
 {
     public SpriteRenderer sprite;
+    public TextMesh playerText;
+    public string description; 
+    public float delay;
+    public float exitDelay;
+
+    private IEnumerator writeTextCoroutine;
+
     private bool collided = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +26,7 @@ public class Interactive : MonoBehaviour
         {
             sprite.color = Color.white;
             collided = false;
-        }
+        }   
     }
 
     private void Update()
@@ -29,8 +37,26 @@ public class Interactive : MonoBehaviour
             
             if (Input.GetButtonDown("Interact"))
             {
-                
+                writeTextCoroutine = writeText(description, 0.1f, 1f);
+                StartCoroutine(writeTextCoroutine);
             }
         }
     }
+    private IEnumerator writeText(string text, float delay, float exitDelay)
+    {
+        foreach (char c in text)
+        {
+            playerText.text += c;
+            yield return new WaitForSeconds(delay);
+        }
+
+        yield return new WaitForSeconds(exitDelay);
+
+        for (int i = text.Length; i >= 0; i--)
+        {
+            playerText.text = playerText.text.Substring(0, i);
+            yield return new WaitForSeconds(delay);
+        }
+    }
+
 }

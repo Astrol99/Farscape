@@ -3,7 +3,7 @@
 public class Player : MonoBehaviour
 {
     public CharacterController2D controller;
-    public Animator animator; 
+    public Animator animator;
 
     public float defaultSpeed = 100f;
     public float sprintSpeed = 120f;
