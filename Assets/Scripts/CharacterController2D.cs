@@ -142,5 +142,14 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+		// Prevent playerText from being flipped
+		Quaternion textRotation = GetComponentInChildren<TextMesh>().transform.rotation;
+		if (theScale.x == -1f)
+			textRotation.y = 180;
+		else
+			textRotation.y = 0;
+
+		GetComponentInChildren<TextMesh>().transform.rotation = textRotation;
 	}
 }
