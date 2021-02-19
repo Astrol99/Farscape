@@ -21,17 +21,6 @@ public class Interactive : MonoBehaviour
         }
     }
 
-    private GameObject createText(string text, float delay)
-    {
-        GameObject textObj = new GameObject("interactText");
-        textObj.transform.SetParent(this.transform);
-
-        Text textComponent = textObj.AddComponent<Text>();
-        textComponent.text = text;
-
-        return textObj;
-    }
-
     private void Update()
     {
         if (collided)
@@ -40,7 +29,7 @@ public class Interactive : MonoBehaviour
             
             if (Input.GetButtonDown("Interact"))
             {
-                createText("I AM A TURTLE", 10f);
+                
             }
         }
     }
