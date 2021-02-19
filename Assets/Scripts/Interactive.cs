@@ -13,6 +13,7 @@ public class Interactive : MonoBehaviour
     private IEnumerator writeTextCoroutine;
 
     private bool collided = false;
+    private bool writingText = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +36,7 @@ public class Interactive : MonoBehaviour
         {
             sprite.color = Color.Lerp(Color.white, new Color(255, 255, 0, 0.5f), Mathf.PingPong(Time.time, 1));
             
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact") && !writingText)
             {
                 writeTextCoroutine = writeText(description, 0.1f, 1f);
                 StartCoroutine(writeTextCoroutine);
@@ -44,6 +45,8 @@ public class Interactive : MonoBehaviour
     }
     private IEnumerator writeText(string text, float delay, float exitDelay)
     {
+        writingText = true;
+
         foreach (char c in text)
         {
             playerText.text += c;
@@ -57,6 +60,8 @@ public class Interactive : MonoBehaviour
             playerText.text = playerText.text.Substring(0, i);
             yield return new WaitForSeconds(delay);
         }
+
+        writingText = false;
     }
 
 }
