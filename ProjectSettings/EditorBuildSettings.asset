@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Arctic.unity
     guid: 7e1e33691ae94ec4484c2c33a7ff56c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Desert.unity
     guid: 9d5d3c52a89738b4a830136371323e41
   m_configObjects: {}
