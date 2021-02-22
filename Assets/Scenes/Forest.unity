@@ -341,9 +341,9 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 418130679}
   - {fileID: 1001975006}
   - {fileID: 2036445913}
-  - {fileID: 418130679}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -664,7 +664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 159740385}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &418130680
 TextMesh:
@@ -727,25 +727,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1818360610 &418130682
-ScaleConstraint:
+--- !u!114 &418130682
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418130678}
   m_Enabled: 1
-  m_Weight: 1
-  m_ScaleAtRest: {x: 1, y: 1, z: 1}
-  m_ScaleOffset: {x: 1, y: 1, z: 1}
-  m_AffectScalingX: 1
-  m_AffectScalingY: 0
-  m_AffectScalingZ: 0
-  m_IsContraintActive: 0
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 418130679}
-    weight: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff67eb8945f88f40ab623906e196b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &503022843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,10 +1306,10 @@ GameObject:
   m_Component:
   - component: {fileID: 987718298}
   - component: {fileID: 987718297}
-  - component: {fileID: 987718300}
+  - component: {fileID: 987718301}
   - component: {fileID: 987718296}
   - component: {fileID: 987718299}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Turtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1326,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25, y: 0.05}
@@ -1435,7 +1428,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &987718300
+--- !u!114 &987718301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1444,14 +1437,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 987718295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ef787675fd59448bc9588af696972b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fae1953de65277458afabe8db40b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 987718297}
-  playerText: {fileID: 418130680}
-  description: Wow! This is a very big green turtle!
-  delay: 0.001
-  exitDelay: 2
+  speed: 1
+  delay: 3
 --- !u!1 &1001975005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 159740385}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096320456
 GameObject:
@@ -1734,9 +1724,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471685231}
+  - component: {fileID: 1471685233}
   - component: {fileID: 1471685232}
-  m_Layer: 8
-  m_Name: TurtleCollider
+  m_Layer: 9
+  m_Name: TurtleTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,7 +1757,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25, y: 0.05}
@@ -1782,6 +1773,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3, y: 2.1}
   m_EdgeRadius: 0
+--- !u!114 &1471685233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471685230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef787675fd59448bc9588af696972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 987718297}
+  playerText: {fileID: 418130680}
+  description: Wow! This is a very big green turtle!
+  delay: 0.001
+  exitDelay: 2
 --- !u!1 &1627925260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,5 +2128,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 159740385}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
