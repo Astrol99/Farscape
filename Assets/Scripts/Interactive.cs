@@ -6,9 +6,9 @@ public class Interactive : MonoBehaviour
 {
     public SpriteRenderer sprite;
     public TextMesh playerText;
-    public string description; 
-    public float delay;
-    public float exitDelay;
+    public string description = "A very good description"; 
+    public float delay = 0.001f;
+    public float exitDelay = 2f;
 
     private IEnumerator writeTextCoroutine;
 
