@@ -1309,6 +1309,7 @@ GameObject:
   - component: {fileID: 987718301}
   - component: {fileID: 987718296}
   - component: {fileID: 987718299}
+  - component: {fileID: 987718300}
   m_Layer: 8
   m_Name: Turtle
   m_TagString: Untagged
@@ -1428,6 +1429,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &987718300
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987718295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46b20db6ed43311488587d0f0ba6678b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &987718301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,6 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fae1953de65277458afabe8db40b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 987718300}
   speed: 1
   delay: 3
 --- !u!1 &1001975005
