@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Idle : MonoBehaviour
+public class Animal : MonoBehaviour
 {
     public Animator animator;
     public float speed = 1f;
