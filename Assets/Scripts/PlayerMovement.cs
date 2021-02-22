@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         speed = defaultSpeed;
+        animator.SetBool("IsJumping", true);
     }
 
     private void Update()

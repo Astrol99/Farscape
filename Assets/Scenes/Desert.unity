@@ -830,7 +830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508543396}
   - component: {fileID: 508543395}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Forest Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +876,7 @@ SpriteRenderer:
   m_SortingLayerID: -1448900031
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a26b807d46bfb0749a3dc9aac0fbbec1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c17a2abab5ce34c4f8565e1529466a61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -899,7 +899,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512073154
 GameObject:
@@ -943,7 +943,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 0.89174795}
+  m_Size: {x: 50, y: 0.89174795}
   m_EdgeRadius: 0
 --- !u!212 &512073156
 SpriteRenderer:
@@ -984,8 +984,8 @@ SpriteRenderer:
   m_SortingLayerID: -583083845
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc5a25047f7f4ba4dad51de86d8711fb, type: 3}
-  m_Color: {r: 0.5283019, g: 0.48095408, b: 0.48095408, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3133ae78b698d974da5d9d4b0ce3207d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1007,7 +1007,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1139,7 +1139,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 96da4a83c7960d94da7febfbea7240be, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0555befdc845ca84a88c7d868ecf37fc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -1559,7 +1559,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1448900031
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 613beec6a2052c5429d965b3c6859d9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1584,7 +1584,7 @@ Transform:
   m_Children:
   - {fileID: 1471685231}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &987718299
 Rigidbody2D:
