@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Idle : MonoBehaviour
 {
+    public Animator animator;
     public float speed = 1f;
     public float delay = 2f;
 
@@ -18,6 +19,7 @@ public class Idle : MonoBehaviour
     void toggleMovement() 
     {
         move = !move;
+        animator.SetBool("Moving", move);
     }
 
     void toggleDirection()
