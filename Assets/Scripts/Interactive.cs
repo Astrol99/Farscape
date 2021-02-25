@@ -6,7 +6,7 @@ public class Interactive : MonoBehaviour
 {
     public SpriteRenderer sprite;
     public TextMesh playerText;
-    public string description = "A very good description"; 
+    public string description = "A very good description";
     public float delay = 0.001f;
     public float exitDelay = 2f;
 
