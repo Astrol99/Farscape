@@ -5,7 +5,7 @@ public class Portal : MonoBehaviour
 {
     private SpriteRenderer renderer;
     public bool StartPortal = false;
-    private float timeToFade = 1.0f;
+    public float timeToFade = 1.0f;
 
     private void Start()
     {
